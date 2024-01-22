@@ -1,5 +1,4 @@
 package bms.algorithm;
-
 import org.junit.jupiter.api.Test;
 
 /**
@@ -9,9 +8,8 @@ import org.junit.jupiter.api.Test;
 public class ClockAngle {
 
     class Solution {
-        // Constraints
         // C1. hour between 1 ~ 12, minutes between 0 ~ 59
-        // C2. find the smaller angle between the two hands
+        // C2. find the smaller angle betwegit en the two hands
         // Procedure
         // P1. first get the minute angle and hourangle from 12:00
         // P2. 1minute = 6 degrees. 1 hour = 30degrees. plus the 1 minute moves 0.5degrees of hour hand
