@@ -1,4 +1,4 @@
-package bms.algorithm;
+package bms.algorithm.must;
 import org.junit.jupiter.api.Test;
 
 /**
