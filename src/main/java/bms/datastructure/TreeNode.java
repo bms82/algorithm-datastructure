@@ -1,16 +1,14 @@
 package bms.datastructure;
 
-import org.junit.jupiter.api.Test;
-
 public class TreeNode {
-    String val;
-    TreeNode left;
-    TreeNode right;
+    public String val;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode() {
     }
 
-    TreeNode(String val) {
+    public TreeNode(String val) {
         this.val = val;
     }
 
@@ -18,6 +16,12 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public TreeNode(int number) {
+        this.val = String.valueOf(number);
+        this.left = null;
+        this.right = null;
     }
 
     public void visit() {

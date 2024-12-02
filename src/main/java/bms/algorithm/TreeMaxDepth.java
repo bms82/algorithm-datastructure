@@ -41,24 +41,23 @@ public class TreeMaxDepth {
     // P3. return the value with max val.
     public int maxDepth(TreeNode root) {
         if (root == null) return 0;
-        Queue<TreeNode> treeNodeStack = new ArrayDeque<>();
-        root.val = 1;
-        treeNodeStack.add(root);
-        int depth = 1;
-        while(!treeNodeStack.isEmpty()) {
-            TreeNode node = treeNodeStack.poll();
-            if (node.left != null) {
-                node.left.val = node.val+1;
-                treeNodeStack.add(node.left);
+        Queue<TreeNode> nodeStack = new ArrayDeque<>();
+        int depth = 0;
+        TreeNode currentNode = root;
+        currentNode.val = 1;
+        nodeStack.offer(currentNode);
+        while (!nodeStack.isEmpty()) {
+            currentNode = nodeStack.poll();
+            depth = currentNode.val;
+            if (currentNode.left != null) {
+                currentNode.left.val = depth + 1;
+                nodeStack.offer(currentNode.left);
             }
-            if (node.right != null) {
-                node.right.val = node.val+1;
-                treeNodeStack.add(node.right);
+            if (currentNode.right != null) {
+                currentNode.right.val = depth + 1;
+                nodeStack.offer(currentNode.right);
             }
-            depth = Math.max(node.val, depth);
         }
-
-
         return depth;
     }
 

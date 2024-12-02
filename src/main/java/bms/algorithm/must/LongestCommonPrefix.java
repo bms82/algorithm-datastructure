@@ -22,4 +22,4 @@ public class LongestCommonPrefix {
         return ans;
     }
 }
-}
+
